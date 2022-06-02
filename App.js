@@ -1,30 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'
+import {View, StatusBar} from 'react-native'
 
- export default function App(){
-   return(
+import Home from './src/pages/Home'
 
-     <View style={style.container}>
-       <Text style={style.title}>Meu primeiro app</Text>
-
-       <Text style={style.title}>Segundo texto</Text>
-     </View>
-
-   )
- }
-
- const style = StyleSheet.create({
-   container:{
-     backgroundColor: '#121212',
-     flex:1,
-     justifyContent: 'center',
-     alignItems: 'center'
-     
-   },
-
-   
-   title:{
-     color:'#FFF',
-     fontSize: 24
-   }
- })
+export default function App (){
+  return(
+    <View>
+      <StatusBar backgroundColor= "#232630" barStyle="light-content" />
+      <Home/>
+    </View>
+  )
+}
